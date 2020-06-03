@@ -1,1 +1,1 @@
-![Optional Text](../readme.png)
+![Optional Text](readme.png)
