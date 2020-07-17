@@ -23,11 +23,9 @@ public class LoginActivity extends BaseActivity implements
 
     private static final String TAG = "EmailPassword";
     private TextView mStatusTextView;
-    //private TextView mDetailTextView;
     private EditText mEmailField;
     private Button btnContinue;
     private EditText mPasswordField;
-
     private FirebaseAuth mAuth;
 
 

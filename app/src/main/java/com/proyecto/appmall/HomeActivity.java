@@ -19,6 +19,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
@@ -41,6 +42,8 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     private FirebaseAuth auth;
     public String tagFragment;
     private FirebaseAuth mAuth;
+    private static final int INTERVALO = 2000; //2 segundos para salir
+    private long tiempoPrimerClick;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,6 +137,14 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
         } else {
             super.onBackPressed();
         }
+        if (tiempoPrimerClick + INTERVALO > System.currentTimeMillis()){
+            super.onBackPressed();
+            return;
+        }else {
+            Toast.makeText(this, "Vuelve a presionar para salir",
+                    Toast.LENGTH_SHORT).show();
+        }
+        tiempoPrimerClick = System.currentTimeMillis();
     }
 
 

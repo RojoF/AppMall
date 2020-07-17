@@ -147,27 +147,6 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(MainActivity.this, getString(R.string.notification), Toast.LENGTH_LONG).show();
         }
     }
-            /* Se coje el primer caracter del string origen y fin introducidos en los textView
-            bucle para pintar cada paso en el textView
-            for (int i = 1; i < respuesta.length(); i++) {
-            char read = respuesta.charAt(i);
-            if (read == 'r') {
-                txtResult.append("Radiologia-> ");
-
-            }
-            if (read == 'u') {
-                txtResult.append("Urgencias-> ");
-
-            }
-            if (read == 't') {
-                txtResult.append("Traumatología-> ");
-
-            }
-            if (read == 'a') {
-                txtResult.append("Ascensor-> ");
-
-            }
-        }*/
 
     public void onClickMapa(View v) {
 
